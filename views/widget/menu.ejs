@@ -3,11 +3,21 @@
 			<h1 id="fh5co-logo"><a href="/">Blog</a></h1>
 			<nav id="fh5co-main-menu" role="navigation">
 				<ul>
-					<li <%if(name == 'index'){%>class="fh5co-active"<%}%>><a href="/">首页</a></li>
-					<li <%if(name == 'blog'){%>class="fh5co-active"<%}%>><a href="/blog">博客浏览</a></li>
-					<li <%if(name == 'photo'){%>class="fh5co-active"<%}%>><a href="/photo">照片墙</a></li>
-					<li {if condition="$name eq 'time'"}class="fh5co-active"{/if}><a href="{:url('/index/time/index')}">时光轴</a></li>
-					<li {if condition="$name eq 'show'"}class="fh5co-active"{/if}><a href="{:url('/index/time/show')}">打赏</a></li>
+					<li <%if(name == 'index'){%>class="fh5co-active"<%}%>>
+						<a href="/">首页</a>
+					</li>
+					<li <%if(name == 'blog'){%>class="fh5co-active"<%}%>>
+						<a href="/blog">博客浏览</a>
+					</li>
+					<li <%if(name == 'photo'){%>class="fh5co-active"<%}%>>
+						<a href="/photo">照片墙</a>
+					</li>
+					<li <%if(name == 'time'){%>class="fh5co-active"<%}%>>
+						<a href="/time">时光轴</a>
+					</li>
+					<li <%if(name == 'show'){%>class="fh5co-active"<%}%>>
+						<a href="/show">打赏</a>
+					</li>
 				</ul>
 			</nav>
 
