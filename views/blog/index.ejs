@@ -1,0 +1,33 @@
+	<%-include("../widget/head", {key: '博客,个人博客,blog', content: '陈少俊的个人博客', title: "博客欣赏"})%>
+	<div id="fh5co-page">
+		<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
+		<%-include("../widget/menu", {name: 'blog'})%>
+
+		<div id="fh5co-main">
+			<div class="fh5co-narrow-content">
+				<h2 class="fh5co-heading animate-box" data-animate-effect="fadeInLeft">Read My Blog</h2>
+				<%tab.forEach((t)=>{%>
+				<div class="row row-bottom-padded-md">
+					<h3 class="animate-box" data-animate-effect="fadeInRight" style="padding-left: 10px;"><%=t.sort_article_name%></h3>
+					<%article.forEach((blog)=>{%>
+						<%if(blog.tab_id == t.id){%>
+						<div class="col-md-3 col-sm-6 col-padding animate-box" data-animate-effect="fadeInLeft">
+							<div class="blog-entry">
+								<a href="#" class="blog-img"><img src="<%=blog.image_url%>" class="img-responsive" alt="<%=blog.article_name%>"></a>
+								<div class="desc">
+									<h3><a href="#"><%=blog.article_name%></a></h3>
+									<span><small>by Admin </small> / <small> <%=blog.tags%> </small> / <small> <i class="icon-comment"></i> <%=blog.article_click%></small></span>
+									<p><%=moment(blog.article_time*1000).format('YYYY-MM-DD')%></p>
+									<a href="/detail/<%=blog.article_id%>" class="lead">Read More <i class="icon-arrow-right3"></i></a>
+								</div>
+							</div>
+						</div>
+						<%}%>
+					<%})%>
+				</div>
+				<%})%>
+			</div>
+		</div>
+	</div>
+
+	<%-include('../common/commonJs')%>

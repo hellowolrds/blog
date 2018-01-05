@@ -16,7 +16,7 @@
 					   			<div class="col-md-8 col-md-offset-2 text-center js-fullheight slider-text">
 					   				<div class="slider-text-inner">
 					   					<h1><%=data.article_name%></h1>
-											<p><a class="btn btn-primary btn-demo popup-vimeo" href=""> <i class="icon-monitor"></i> 阅读</a> <a class="btn btn-primary btn-learn">点赞<i class="icon-arrow-right3"></i></a></p>
+											<p><a class="btn btn-primary btn-demo popup-vimeo" href="/detail/<%=data.article_id%>"> <i class="icon-monitor"></i> 阅读</a> <a class="btn btn-primary btn-learn">点赞<i class="icon-arrow-right3"></i></a></p>
 					   				</div>
 					   			</div>
 					   		</div>
@@ -87,8 +87,8 @@
 							<div class="desc">
 								<h3><a href="#"><%=data.article_name%></a></h3>
 								<span><small>by Admin </small> / <small> <%=data.tags%> </small> / <small> <i class="icon-comment"></i> <%=data.article_click%></small></span>
-								<p><%=data.article_time%></p>
-								<a href="" class="lead">阅读 <i class="icon-arrow-right3"></i></a>
+								<p><%=moment(data.article_time*1000).format('YYYY-MM-DD')%></p>
+								<a href="/detail/<%=data.article_id%>" class="lead">阅读 <i class="icon-arrow-right3"></i></a>
 							</div>
 						</div>
 					</div>

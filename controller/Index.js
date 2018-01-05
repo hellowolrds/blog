@@ -1,4 +1,5 @@
 let conn = require('./mysql');
+let moment = require('moment');
 let Articles = {
 	getData (callback) {
 		get().then(data=>{
@@ -29,7 +30,8 @@ async function get () {
 	return {
 		article: article,
 		photo: photo,
-		last: last
+		last: last,
+		moment: moment
 	}
 }
 
